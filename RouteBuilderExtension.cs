@@ -2,12 +2,12 @@
 
 public static class RouteBuilderExtension
 {
-    public static void MapWeatherRoutes(this IEndpointRouteBuilder app)
+    public static void MapWeatherRoutes(this IEndpointRouteBuilder app, string appId)
     {
         app.MapGet("api/getweatherasync", async (IHttpClientFactory httpClientFactory) =>
         {
             var httpClient = httpClientFactory.CreateClient("WeatherClient");
-            var response = await httpClient.GetFromJsonAsync<WeatherForecastRecord>("/data/2.5/weather?lat=44.34&lon=10.99&appid=df34aeae6aa6ec8c499f67eaab4ffcc3");
+            var response = await httpClient.GetFromJsonAsync<WeatherForecastRecord>($"/data/2.5/weather?lat=44.34&lon=10.99&appid={appId}");
 
             if (response != null && response is WeatherForecastRecord)
             {

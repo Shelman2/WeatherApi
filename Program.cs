@@ -56,6 +56,10 @@ builder.Services.AddHttpClient("WeatherClient", client =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Load configuration
+var configuration = builder.Configuration;
+var appId = configuration["OpenWeatherMap:AppId"];
+
 var app = builder.Build();
 
 // Enable Swagger middleware
@@ -67,6 +71,6 @@ app.UseSwaggerUI(options =>
 });
 
 // Map routes using static map
-app.MapWeatherRoutes();
+app.MapWeatherRoutes(appId);
 
 app.Run();
