@@ -1,0 +1,7 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@WeatherApi_HostAddress = https://localhost:7070
+
+GET {{WeatherApi_HostAddress}}/api/getweatherasync/
+Accept: application/json
+
+###
