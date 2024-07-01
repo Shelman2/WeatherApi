@@ -63,7 +63,7 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "Weather API V1");
-    options.RoutePrefix = string.Empty; // Set Swagger UI as the default page
+    options.RoutePrefix = string.Empty; 
 });
 
 // Map routes using static map
