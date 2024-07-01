@@ -16,8 +16,7 @@ A minimal API endpoint that retrieves weather data from the OpenWeatherMap API, 
 
 Contributors names and contact info
 
-ex. Sheldon Cohen 
-ex. [LinkedIn]([https://twitter.com/dompizzie](https://www.linkedin.com/in/sheldonrcohen/])
+[Sheldon Cohen | LinkedIn](https://www.linkedin.com/in/sheldonrcohen/)
 
 ## Version History
 
